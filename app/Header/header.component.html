@@ -1,0 +1,37 @@
+<header role="header" class="site__header header" id="header">
+  <div class="header__wrapper">
+
+    <div class="header__brand">
+      <img src="https://mazipan.github.io/lightweight-admin-template/images/irfan-maulana.jpg" />
+      <div class="header__title" [innerText]="headerTitle">
+      </div>
+    </div>
+
+    <div class="header__account account account--has-login">
+      <div class="account__wrapper">
+        <img class="account__img" src="https://mazipan.github.io/lightweight-admin-template/images/irfan-maulana.jpg" />
+        <span class="account__name" [innerText]="userName">
+        </span>
+      </div>
+      <i class="account__arrow fa fa-angle-down js--show-dropdown-menu"></i>
+
+      <div class="account__menu">
+        <ul class="account__menu-wrapper">
+          <li class="account__menu-item"><a href="#profil">Profile</a></li>
+          <li class="account__menu-item"><a href="#logout">Logout</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="header__nav--mobile">
+      <div class="header__nav-btn" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </div>
+</header>
