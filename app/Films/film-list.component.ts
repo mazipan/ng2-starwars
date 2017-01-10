@@ -2,6 +2,7 @@
  * Created by irfan.maulana on 1/8/2017.
  */
 import { Component, OnInit } from '@angular/core';
+
 import { FilmService } from './film-list.service';
 import { Film } from './film';
 

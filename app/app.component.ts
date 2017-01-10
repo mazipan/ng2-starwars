@@ -14,8 +14,8 @@ import { Component } from '@angular/core';
         </nav>
         <article class="main__content content">
           <div class="content__wrapper">
-          
-              <film-list></film-list>
+              
+              <router-outlet></router-outlet>
             
           </div>
         </article>

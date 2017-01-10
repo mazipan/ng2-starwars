@@ -12,16 +12,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by irfan.maulana on 1/8/2017.
  */
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var NavigationComponent = (function () {
-    function NavigationComponent() {
+    function NavigationComponent(router) {
+        this.router = router;
     }
+    NavigationComponent.prototype.switchTab = function (tabName) {
+        this.tabActive = tabName;
+        this.router.navigate(['/' + tabName]);
+    };
     NavigationComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'NavigationListBlock',
             templateUrl: 'navigation.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], NavigationComponent);
     return NavigationComponent;
 }());

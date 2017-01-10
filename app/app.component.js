@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n      <HeaderBlock></HeaderBlock>\n    \n      <main role=\"main\" class=\"site__main main\">\n        <nav class=\"main__nav nav\">\n      \n          <NavigationListBlock></NavigationListBlock>\n      \n          <FooterBlock></FooterBlock>\n      \n        </nav>\n        <article class=\"main__content content\">\n          <div class=\"content__wrapper\">\n          \n              <film-list></film-list>\n            \n          </div>\n        </article>\n      </main>\n  "
+            template: "\n      <HeaderBlock></HeaderBlock>\n    \n      <main role=\"main\" class=\"site__main main\">\n        <nav class=\"main__nav nav\">\n      \n          <NavigationListBlock></NavigationListBlock>\n      \n          <FooterBlock></FooterBlock>\n      \n        </nav>\n        <article class=\"main__content content\">\n          <div class=\"content__wrapper\">\n              \n              <router-outlet></router-outlet>\n            \n          </div>\n        </article>\n      </main>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

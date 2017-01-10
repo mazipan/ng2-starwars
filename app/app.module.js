@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
 /*
 Component partial
 */
@@ -19,10 +20,17 @@ var header_component_1 = require('./Header/header.component');
 var navigation_component_1 = require('./Navigation/navigation.component');
 var footer_component_1 = require('./Footer/footer.component');
 var film_list_component_1 = require('./Films/film-list.component');
+var planet_list_component_1 = require('./Planet/planet-list.component');
 /*
  Service to get data
  */
 var film_list_service_1 = require('./Films/film-list.service');
+var planet_list_service_1 = require('./Planet/planet-list.service');
+var appRoutes = [
+    { path: '', component: film_list_component_1.FilmListComponent },
+    { path: 'film', component: film_list_component_1.FilmListComponent },
+    { path: 'planet', component: planet_list_component_1.PlanetListComponent }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,16 +40,23 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 http_1.JsonpModule,
+                router_1.RouterModule.forRoot(appRoutes)
             ],
+            /*
+             AppRoutingModule
+             RouterModule.forRoot(appRoutes)
+            */
             declarations: [
                 app_component_1.AppComponent,
                 header_component_1.HeaderComponent,
                 navigation_component_1.NavigationComponent,
                 footer_component_1.FoooterComponent,
-                film_list_component_1.FilmListComponent
+                film_list_component_1.FilmListComponent,
+                planet_list_component_1.PlanetListComponent
             ],
             providers: [
-                film_list_service_1.FilmService
+                film_list_service_1.FilmService,
+                planet_list_service_1.PlanetService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
