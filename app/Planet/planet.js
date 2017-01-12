@@ -17,4 +17,4 @@ var Planet = (function () {
     return Planet;
 }());
 exports.Planet = Planet;
-//# sourceMappingURL=planet.js.map
+//# sourceMappingURL=Planet.js.map

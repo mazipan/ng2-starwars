@@ -4,12 +4,32 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PlanetService } from './planet-list.service';
-import { Planet } from './planet';
+import { Planet } from './Planet';
 
 @Component({
   moduleId: module.id,
   selector: 'planet-list',
-  templateUrl: 'planet-list.component.html'
+  template: `
+        <h2>Planets</h2>
+      
+        <table class="table">
+          <thead class="table__head">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Diameter</th>
+            <th>Population</th>
+          </tr>
+          </thead>
+          <tbody class="table__body">
+          <tr *ngFor="let planet of planets; let i = index; trackBy:trackByName;">
+            <td>{{ i+1 }}</td>
+            <td>{{ planet.name }}</td>
+            <td>{{ planet.diameter }}</td>
+            <td>{{ planet.population }}</td>
+          </tr>
+          </tbody>
+        </table>`
 })
 export class PlanetListComponent implements OnInit {
 

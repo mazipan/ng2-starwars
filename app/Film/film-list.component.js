@@ -37,7 +37,7 @@ var FilmListComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'film-list',
-            templateUrl: 'film-list.component.html'
+            template: "\n      <h2>Films</h2>\n      \n      <table class=\"table\">\n        <thead class=\"table__head\">\n        <tr>\n          <th>#</th>\n          <th>Title</th>\n          <th>Episode</th>\n          <th>Release Date</th>\n        </tr>\n        </thead>\n        <tbody class=\"table__body\">\n        <tr *ngFor=\"let film of films; let i = index; trackBy:trackByEpisodId;\">\n          <td>{{ i+1 }}</td>\n          <td>{{ film.title }}</td>\n          <td>{{ film.episodeId }}</td>\n          <td>{{ film.releaseDate }}</td>\n        </tr>\n        </tbody>\n      </table>\n  "
         }), 
         __metadata('design:paramtypes', [film_list_service_1.FilmService])
     ], FilmListComponent);

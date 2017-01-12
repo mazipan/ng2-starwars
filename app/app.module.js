@@ -19,15 +19,15 @@ var app_component_1 = require('./app.component');
 var header_component_1 = require('./Header/header.component');
 var navigation_component_1 = require('./Navigation/navigation.component');
 var footer_component_1 = require('./Footer/footer.component');
-var film_list_component_1 = require('./Films/film-list.component');
+var film_list_component_1 = require('./Film/film-list.component');
 var planet_list_component_1 = require('./Planet/planet-list.component');
 /*
  Service to get data
  */
-var film_list_service_1 = require('./Films/film-list.service');
+var film_list_service_1 = require('./Film/film-list.service');
 var planet_list_service_1 = require('./Planet/planet-list.service');
 var appRoutes = [
-    { path: '', component: film_list_component_1.FilmListComponent },
+    { path: '', redirectTo: 'film', pathMatch: 'full' },
     { path: 'film', component: film_list_component_1.FilmListComponent },
     { path: 'planet', component: planet_list_component_1.PlanetListComponent }
 ];

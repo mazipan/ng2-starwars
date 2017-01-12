@@ -3,7 +3,7 @@
  */
 import { Injectable }     from '@angular/core';
 import { Http, Response} from '@angular/http';
-import { Film }    from './film';
+import { Film }    from './Film';
 import {Observable} from 'rxjs/Rx';
 
 // Import RxJs required methods

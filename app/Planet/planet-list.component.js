@@ -37,7 +37,7 @@ var PlanetListComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'planet-list',
-            templateUrl: 'planet-list.component.html'
+            template: "\n        <h2>Planets</h2>\n      \n        <table class=\"table\">\n          <thead class=\"table__head\">\n          <tr>\n            <th>#</th>\n            <th>Name</th>\n            <th>Diameter</th>\n            <th>Population</th>\n          </tr>\n          </thead>\n          <tbody class=\"table__body\">\n          <tr *ngFor=\"let planet of planets; let i = index; trackBy:trackByName;\">\n            <td>{{ i+1 }}</td>\n            <td>{{ planet.name }}</td>\n            <td>{{ planet.diameter }}</td>\n            <td>{{ planet.population }}</td>\n          </tr>\n          </tbody>\n        </table>"
         }), 
         __metadata('design:paramtypes', [planet_list_service_1.PlanetService])
     ], PlanetListComponent);

@@ -4,12 +4,33 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FilmService } from './film-list.service';
-import { Film } from './film';
+import { Film } from './Film';
 
 @Component({
   moduleId: module.id,
   selector: 'film-list',
-  templateUrl: 'film-list.component.html'
+  template: `
+      <h2>Films</h2>
+      
+      <table class="table">
+        <thead class="table__head">
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Episode</th>
+          <th>Release Date</th>
+        </tr>
+        </thead>
+        <tbody class="table__body">
+        <tr *ngFor="let film of films; let i = index; trackBy:trackByEpisodId;">
+          <td>{{ i+1 }}</td>
+          <td>{{ film.title }}</td>
+          <td>{{ film.episodeId }}</td>
+          <td>{{ film.releaseDate }}</td>
+        </tr>
+        </tbody>
+      </table>
+  `
 })
 export class FilmListComponent implements OnInit {
 

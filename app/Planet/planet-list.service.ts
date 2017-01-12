@@ -3,7 +3,7 @@
  */
 import { Injectable }     from '@angular/core';
 import { Http, Response} from '@angular/http';
-import { Planet } from './planet';
+import { Planet } from './Planet';
 import {Observable} from 'rxjs/Rx';
 
 // Import RxJs required methods

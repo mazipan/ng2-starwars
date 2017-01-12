@@ -13,7 +13,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var film_list_component_1 = require('./Films/film-list.component');
+var film_list_component_1 = require('./Film/film-list.component');
 var planet_list_component_1 = require('./Planet/planet-list.component');
 var appRoutes = [
     { path: '', component: film_list_component_1.FilmListComponent },

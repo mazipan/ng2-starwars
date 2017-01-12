@@ -1,6 +1,7 @@
 # ng2-starwars
 Star Wars API implementation in Angular2
 <br/>
+-- under development --
 
 ## Technology Usage
 - Boilerplate based on https://github.com/angular/quickstart

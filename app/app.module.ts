@@ -16,18 +16,18 @@ import { AppComponent }  from './app.component';
 import { HeaderComponent } from './Header/header.component';
 import { NavigationComponent } from './Navigation/navigation.component';
 import { FoooterComponent } from './Footer/footer.component';
-import { FilmListComponent } from './Films/film-list.component';
+import { FilmListComponent } from './Film/film-list.component';
 import { PlanetListComponent } from './Planet/planet-list.component';
 
 /*
  Service to get data
  */
-import { FilmService } from './Films/film-list.service';
+import { FilmService } from './Film/film-list.service';
 import { PlanetService } from './Planet/planet-list.service';
 
 const appRoutes: Routes = [
-  { path: '',  component: FilmListComponent },
-  { path: 'film',  component: FilmListComponent },
+  { path: '', redirectTo: 'film', pathMatch: 'full' },
+  { path: 'film',  component: FilmListComponent},
   { path: 'planet', component: PlanetListComponent }
 ];
 
