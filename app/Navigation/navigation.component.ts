@@ -25,9 +25,9 @@ import { Router } from '@angular/router';
             <i class="nav__icon fa fa-car"></i> Vehicle
           </a>
         </li>
-        <li class="nav__item" routerLink="/spaceship" routerLinkActive="nav__item--active">
-          <a routerLink="/spaceship" routerLinkActive="active">
-            <i class="nav__icon fa fa-space-shuttle"></i> Spaceship
+        <li class="nav__item" routerLink="/starship" routerLinkActive="nav__item--active">
+          <a routerLink="/starship" routerLinkActive="active">
+            <i class="nav__icon fa fa-space-shuttle"></i> Starship
           </a>
         </li>
         <li class="nav__item" routerLink="/species" routerLinkActive="nav__item--active">

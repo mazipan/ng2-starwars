@@ -17,18 +17,30 @@ import { HeaderComponent } from './Header/header.component';
 import { NavigationComponent } from './Navigation/navigation.component';
 import { FoooterComponent } from './Footer/footer.component';
 import { FilmListComponent } from './Film/film-list.component';
+import { PeopleListComponent } from './People/people-list.component';
 import { PlanetListComponent } from './Planet/planet-list.component';
+import { SpeciesListComponent } from './Species/species-list.component';
+import { StarshipListComponent } from './Starship/starship-list.component';
+import { VehicleListComponent } from './Vehicle/vehicle-list.component';
 
 /*
  Service to get data
  */
 import { FilmService } from './Film/film-list.service';
 import { PlanetService } from './Planet/planet-list.service';
+import { PeopleService } from "./People/people-list.service";
+import { SpeciesService } from "./Species/species-list.service";
+import { StarshipService } from "./Starship/starship-list.service";
+import { VehicleService } from "./Vehicle/vehicle-list.service";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'film', pathMatch: 'full' },
   { path: 'film',  component: FilmListComponent},
-  { path: 'planet', component: PlanetListComponent }
+  { path: 'planet', component: PlanetListComponent },
+  { path: 'people', component: PeopleListComponent },
+  { path: 'species', component: SpeciesListComponent },
+  { path: 'starship', component: StarshipListComponent },
+  { path: 'vehicle', component: VehicleListComponent }
 ];
 
 @NgModule({
@@ -50,12 +62,20 @@ const appRoutes: Routes = [
     NavigationComponent,
     FoooterComponent,
     FilmListComponent,
-    PlanetListComponent
+    PeopleListComponent,
+    PlanetListComponent,
+    SpeciesListComponent,
+    StarshipListComponent,
+    VehicleListComponent
   ],
 
   providers: [
     FilmService,
-    PlanetService
+    PeopleService,
+    PlanetService,
+    SpeciesService,
+    StarshipService,
+    VehicleService
   ],
 
   bootstrap: [ AppComponent ]
