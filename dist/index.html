@@ -5,28 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="https://mazipan.github.io/awesome-bemcss/dist/awesome-bemcss.min.css">
   <link rel="stylesheet" type="text/css" href="https://mazipan.github.io/lightweight-admin-template/dist/lightweight-admin-template.min.css">
 
-  <!-- Polyfills for older browsers
-  <script src="node_modules/core-js/client/shim.min.js"></script>
-  <script src="node_modules/zone.js/dist/zone.js"></script>
-  <script src="node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="node_modules/systemjs/dist/system.src.js"></script>
-  -->
+  <base href="/">
 
-  <!-- Polyfill(s) for older browsers -->
-  <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+<link href="styles.bundle.css" rel="stylesheet"/></head>
+<body>
+  <my-app>Loading...</my-app>
 
-  <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
-  <script src="https://unpkg.com/reflect-metadata@0.1.3"></script>
-  <script src="https://unpkg.com/systemjs@0.19.27/dist/system.src.js"></script>
-
-
-  <script src="systemjs.config.js"></script>
-  <script>
-    System.import('app').catch(function(err){ console.error(err); });
-  </script>
 
   <script>
     (function (i, s, o, g, r, a, m) {
@@ -44,14 +32,6 @@
     ga('create', 'UA-25065548-2', 'auto');
     ga('send', 'pageview');
   </script>
-
-  <base href="/">
-
-</head>
-<body>
-  <my-app>Loading...</my-app>
-
-
   <script src="https://use.fontawesome.com/89344806bd.js"></script>
-</body>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
 </html>
