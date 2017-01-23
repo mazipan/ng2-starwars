@@ -4,6 +4,9 @@ Star Wars API implementation in Angular2
 
 ![Ng2-StarWars](https://raw.githubusercontent.com/mazipan/ng2-starwars/master/screenshoot.PNG)
 
+## Demo
+https://mazipan.github.io/ng2-starwars/
+
 ## Technology Usage
 - Using angular-cli https://github.com/angular/angular-cli
 - Using StarWars API from https://swapi.co/
