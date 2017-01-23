@@ -4,52 +4,54 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response} from '@angular/http';
 import { Starship }    from './Starship';
-import {Observable} from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 // Import RxJs required methods
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { UrlCollection } from '../Helpers/UrlCollection';
+import { ObjectConverter } from '../Helpers/ObjectConverter';
+
 @Injectable()
 export class StarshipService {
   // Resolve HTTP using the constructor
-  constructor (private http: Http) {}
-  // private instance variable to hold base url
-  private BASE_URL = 'http://swapi.co/api/films/';
+  constructor (
+    private http: Http
+  ) {}
+
+  // public variable to expose
+  public PAGESIZE: number = 10;
+  public totalPage: number = 0;
+  public count: number = 0;
+  public currentPage: number = 1;
+  public isNextable: boolean = false;
+  public isPrevable: boolean = false;
 
   getStarship() : Observable<Starship[]> {
 
+    let thisService = this;
+    let objectConverter = new ObjectConverter();
+
     function mapStarshipResponse(response:Response): Starship[]{
+      thisService.currentPage = 1;
+      thisService.count = response.json().count;
+      thisService.isNextable = response.json().next !== null;
+      thisService.isPrevable = response.json().previous !== null;
+
+      if(thisService.count > thisService.PAGESIZE){
+        thisService.totalPage = Math.ceil(thisService.count / thisService.PAGESIZE);
+      }else{
+        thisService.totalPage = 0;
+      }
+
       // The response of the API has a results
       // property with the actual results
-      return response.json().results.map(toStarship)
-    }
-
-    function toStarship(r:any): Starship{
-
-      let starship = <Starship>({
-        MGLT: r.MGLT,
-        cargo_capacity: r.cargo_capacity,
-        openingCrawl: r.openingCrawl,
-        consumables: r.consumables,
-        created: r.created,
-        crew: r.crew,
-        edited: r.edited,
-        hyperdrive_rating: r.hyperdrive_rating,
-        length: r.length,
-        manufacturer: r.manufacturer,
-        max_atmosphering_speed: r.max_atmosphering_speed,
-        model: r.model,
-        name: r.name,
-        passengers: r.passengers,
-        starship_class: r.starship_class
-      });
-
-      return starship;
+      return response.json().results.map(objectConverter.convertResponseToStarship)
     }
 
     // ...using get request
-    return this.http.get(this.BASE_URL)
+    return this.http.get(UrlCollection.STARSHIP)
       // ...and calling .json() on the response to return data
       .map(mapStarshipResponse)
       //...errors if any

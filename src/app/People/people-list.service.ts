@@ -10,43 +10,49 @@ import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { UrlCollection } from '../Helpers/UrlCollection';
+import { ObjectConverter } from '../Helpers/ObjectConverter';
+
 @Injectable()
 export class PeopleService {
   // Resolve HTTP using the constructor
-  constructor (private http: Http) {}
-  // private instance variable to hold base url
-  private BASE_URL = 'http://swapi.co/api/people/';
+  constructor (
+    private http: Http
+  ) {}
+
+  // public variable to expose
+  public PAGESIZE: number = 10;
+  public totalPage: number = 0;
+  public count: number = 0;
+  public currentPage: number = 1;
+  public isNextable: boolean = false;
+  public isPrevable: boolean = false;
+
 
   getPeople() : Observable<People[]> {
+    let thisService = this;
+    let objectConverter = new ObjectConverter();
 
     function mapPeopleResponse(response:Response): People[]{
+
+      thisService.currentPage = 1;
+      thisService.count = response.json().count;
+      thisService.isNextable = response.json().next !== null;
+      thisService.isPrevable = response.json().previous !== null;
+
+      if(thisService.count > thisService.PAGESIZE){
+        thisService.totalPage = Math.ceil(thisService.count / thisService.PAGESIZE);
+      }else{
+        thisService.totalPage = 0;
+      }
+
       // The response of the API has a results
       // property with the actual results
-      return response.json().results.map(toPeople)
-    }
-
-    function toPeople(r:any): People{
-
-      let people = <People>({
-        birth_year: r.birth_year,
-        eye_color: r.eye_color,
-        openingCrawl: r.openingCrawl,
-        gender: r.gender,
-        hair_color: r.hair_color,
-        height: r.height,
-        homeworld: r.homeworld,
-        mass: r.mass,
-        name: r.name,
-        skin_color: r.skin_color,
-        created: r.created,
-        edited: r.edited,
-      });
-
-      return people;
+      return response.json().results.map(objectConverter.convertResponseToPeople)
     }
 
     // ...using get request
-    return this.http.get(this.BASE_URL)
+    return this.http.get(UrlCollection.PEOPLE)
       // ...and calling .json() on the response to return data
       .map(mapPeopleResponse)
       //...errors if any

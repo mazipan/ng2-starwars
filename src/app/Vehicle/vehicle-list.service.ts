@@ -10,42 +10,49 @@ import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { UrlCollection } from '../Helpers/UrlCollection';
+import { ObjectConverter } from '../Helpers/ObjectConverter';
+
 @Injectable()
 export class VehicleService {
   // Resolve HTTP using the constructor
-  constructor (private http: Http) {}
-  // private instance variable to hold base url
-  private BASE_URL = 'http://swapi.co/api/films/';
+  constructor (
+    private http: Http
+  ) {}
+
+  // public variable to expose
+  public PAGESIZE: number = 10;
+  public totalPage: number = 0;
+  public count: number = 0;
+  public currentPage: number = 1;
+  public isNextable: boolean = false;
+  public isPrevable: boolean = false;
+
 
   getVehicle() : Observable<Vehicle[]> {
 
+    let thisService = this;
+    let objectConverter = new ObjectConverter();
+
     function mapVehicleResponse(response:Response): Vehicle[]{
+      thisService.currentPage = 1;
+      thisService.count = response.json().count;
+      thisService.isNextable = response.json().next !== null;
+      thisService.isPrevable = response.json().previous !== null;
+
+      if(thisService.count > thisService.PAGESIZE){
+        thisService.totalPage = Math.ceil(thisService.count / thisService.PAGESIZE);
+      }else{
+        thisService.totalPage = 0;
+      }
+
       // The response of the API has a results
       // property with the actual results
-      return response.json().results.map(toVehicle)
-    }
-
-    function toVehicle(r:any): Vehicle{
-
-      let vehicle = <Vehicle>({
-        name: r.name,
-        model: r.model,
-        manufacturer: r.manufacturer,
-        cost_in_credits: r.cost_in_credits,
-        length: r.length,
-        max_atmosphering_speed: r.max_atmosphering_speed,
-        crew: r.crew,
-        passengers: r.passengers,
-        cargo_capacity: r.cargo_capacity,
-        consumables: r.consumables,
-        vehicle_class: r.vehicle_class
-      });
-
-      return vehicle;
+      return response.json().results.map(objectConverter.convertResponseToVehicle)
     }
 
     // ...using get request
-    return this.http.get(this.BASE_URL)
+    return this.http.get(UrlCollection.VEHICLE)
       // ...and calling .json() on the response to return data
       .map(mapVehicleResponse)
       //...errors if any

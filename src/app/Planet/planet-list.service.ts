@@ -10,40 +10,47 @@ import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { UrlCollection } from '../Helpers/UrlCollection';
+import { ObjectConverter } from '../Helpers/ObjectConverter';
+
 @Injectable()
 export class PlanetService {
   // Resolve HTTP using the constructor
-  constructor (private http: Http) {}
-  // private instance variable to hold base url
-  private BASE_URL = 'http://swapi.co/api/planets/';
+  constructor (
+    private http: Http
+  ) {}
+
+  // public variable to expose
+  public PAGESIZE: number = 10;
+  public totalPage: number = 0;
+  public count: number = 0;
+  public currentPage: number = 1;
+  public isNextable: boolean = false;
+  public isPrevable: boolean = false;
 
   getPlanets() : Observable<Planet[]> {
+    let thisService = this;
+    let objectConverter = new ObjectConverter();
 
     function mapPlanetsResponse(response:Response): Planet[]{
+
+      thisService.currentPage = 1;
+      thisService.count = response.json().count;
+      thisService.isNextable = response.json().next !== null;
+      thisService.isPrevable = response.json().previous !== null;
+
+      if(thisService.count > thisService.PAGESIZE){
+        thisService.totalPage = Math.ceil(thisService.count / thisService.PAGESIZE);
+      }else{
+        thisService.totalPage = 0;
+      }
       // The response of the API has a results
       // property with the actual results
-      return response.json().results.map(toPlanet)
-    }
-
-    function toPlanet(r:any): Planet{
-
-      let planet = <Planet>({
-        name: r.name,
-        rotation_period: r.rotation_period,
-        orbital_period: r.orbital_period,
-        diameter: r.diameter,
-        terrain: r.terrain,
-        climate: r.climate,
-        gravity: r.gravity,
-        surface_water: r.surface_water,
-        population: r.population,
-      });
-
-      return planet;
+      return response.json().results.map(objectConverter.convertResponseToPlanet)
     }
 
     // ...using get request
-    return this.http.get(this.BASE_URL)
+    return this.http.get(UrlCollection.PLANET)
       // ...and calling .json() on the response to return data
       .map(mapPlanetsResponse)
       //...errors if any
