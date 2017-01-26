@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
   template: `
       <ul class="nav__wrapper">
       
-        <li class="nav__item nav__item--active" routerLink="/film" routerLinkActive="nav__item--active">
-          <a href="#">
+        <li class="nav__item" routerLink="/film" routerLinkActive="nav__item--active">
+          <a href="/film">
             <i class="nav__icon fa fa-film"></i> Film
           </a>
         </li>
