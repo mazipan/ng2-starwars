@@ -49,7 +49,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpModule,
     JsonpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   /*
    AppRoutingModule
