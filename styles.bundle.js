@@ -15,8 +15,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js??ref--9-2!../node_modules/postcss-loader/index.js??postcss!./styles.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js??ref--9-2!../node_modules/postcss-loader/index.js??postcss!./styles.css");
+		module.hot.accept("!!../node_modules/css-loader/index.js??ref--10-2!../node_modules/postcss-loader/index.js??postcss!../node_modules/sass-loader/lib/loader.js??ref--10-4!./styles.scss", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js??ref--10-2!../node_modules/postcss-loader/index.js??postcss!../node_modules/sass-loader/lib/loader.js??ref--10-4!./styles.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1955,7 +1955,7 @@ exports = module.exports = __webpack_require__(215)(false);
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.progress {\n  background-color: rgba(0, 0, 0, 0.8);\n  z-index: 99999;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%; }\n  .progress__wrapper {\n    width: 300px;\n    height: 250px;\n    margin: 17% auto 0;\n    background-color: transparent;\n    border-radius: 10px; }\n  .progress__text {\n    width: 300px;\n    height: 16%;\n    padding-top: 4%;\n    font-weight: bold;\n    color: white;\n    text-align: center; }\n  .progress__img {\n    width: 300px;\n    height: 80%;\n    text-align: center; }\n", ""]);
 
 // exports
 
