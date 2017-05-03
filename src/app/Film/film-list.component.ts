@@ -25,8 +25,8 @@ import { Film } from './Film';
         <tr *ngFor="let film of films; let i = index; trackBy:trackByEpisodId;">
           <td>{{ i+1 }}</td>
           <td>{{ film.title }}</td>
-          <td>{{ film.episodeId }}</td>
-          <td>{{ film.releaseDate }}</td>
+          <td>{{ film.episode_id }}</td>
+          <td>{{ film.release_date }}</td>
         </tr>
         </tbody>
       </table>
@@ -59,6 +59,6 @@ export class FilmListComponent implements OnInit {
   trackByEpisodId(index:number, film:Film) {
 
 
-    return film.episodeId;
+    return film.episode_id;
   }
 }

@@ -15,15 +15,16 @@ export class ObjectConverter {
 
     let film = <Film>({
       title: r.title,
-      episodeId: r.episode_id,
-      openingCrawl: r.opening_crawl,
+      episode_id: r.episode_id,
+      opening_crawl: r.opening_crawl,
       director: r.director,
       producer: r.producer,
-      releaseDate: r.release_date,
+      release_date: r.release_date,
     });
 
     return film;
   };
+  
 
   public convertResponseToPeople(r:any): People{
 
