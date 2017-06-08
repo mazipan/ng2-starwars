@@ -7,42 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'NavigationListBlock',
-  template: `
-      <ul class="nav__wrapper">
-      
-        <li class="nav__item" routerLink="/film" routerLinkActive="nav__item--active">
-          <a href="/film">
-            <i class="nav__icon fa fa-film"></i> Film
-          </a>
-        </li>
-        <li class="nav__item" routerLink="/planet" routerLinkActive="nav__item--active">
-          <a routerLink="/planet" routerLinkActive="active">
-            <i class="nav__icon fa fa-globe"></i> Planet
-          </a>
-        </li>
-        <li class="nav__item" routerLink="/vehicle" routerLinkActive="nav__item--active">
-          <a routerLink="/vehicle" routerLinkActive="active">
-            <i class="nav__icon fa fa-car"></i> Vehicle
-          </a>
-        </li>
-        <li class="nav__item" routerLink="/starship" routerLinkActive="nav__item--active">
-          <a routerLink="/starship" routerLinkActive="active">
-            <i class="nav__icon fa fa-space-shuttle"></i> Starship
-          </a>
-        </li>
-        <li class="nav__item" routerLink="/species" routerLinkActive="nav__item--active">
-          <a routerLink="/species" routerLinkActive="active">
-            <i class="nav__icon fa fa-paw"></i> Species
-          </a>
-        </li>
-        <li class="nav__item" routerLink="/people" routerLinkActive="nav__item--active">
-          <a routerLink="/people" routerLinkActive="active">
-            <i class="nav__icon fa fa-users"></i> People
-          </a>
-        </li>
-      
-      </ul>
-  `
+  templateUrl: './navigation.component.html'
 })
 
 export class NavigationComponent {

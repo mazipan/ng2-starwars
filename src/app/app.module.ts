@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
-
 /*
  Routing Application
  */
@@ -33,15 +32,6 @@ import { SpeciesService } from "./Species/species-list.service";
 import { StarshipService } from "./Starship/starship-list.service";
 import { VehicleService } from "./Vehicle/vehicle-list.service";
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: 'film', pathMatch: 'full' },
-  { path: 'film',  component: FilmListComponent},
-  { path: 'planet', component: PlanetListComponent },
-  { path: 'people', component: PeopleListComponent },
-  { path: 'species', component: SpeciesListComponent },
-  { path: 'starship', component: StarshipListComponent },
-  { path: 'vehicle', component: VehicleListComponent }
-];
 
 @NgModule({
 
@@ -49,12 +39,8 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpModule,
     JsonpModule,
-    RouterModule.forRoot(appRoutes, { useHash: true })
+    AppRoutingModule
   ],
-  /*
-   AppRoutingModule
-   RouterModule.forRoot(appRoutes)
-  */
 
   declarations: [
     AppComponent,

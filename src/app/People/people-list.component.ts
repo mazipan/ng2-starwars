@@ -9,28 +9,7 @@ import { People } from './People';
 @Component({
   moduleId: module.id,
   selector: 'people-list',
-  template: `
-      <h2>People</h2>
-      
-      <table class="table">
-        <thead class="table__head">
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Gender</th>
-          <th>Home World</th>
-        </tr>
-        </thead>
-        <tbody class="table__body">
-        <tr *ngFor="let person of people; let i = index; trackBy:trackByName;">
-          <td>{{ i+1 }}</td>
-          <td>{{ person.name }}</td>
-          <td>{{ person.gender }}</td>
-          <td>{{ person.homeworld }}</td>
-        </tr>
-        </tbody>
-      </table>
-  `
+  templateUrl: './people-list.component.html'
 })
 export class PeopleListComponent implements OnInit {
 

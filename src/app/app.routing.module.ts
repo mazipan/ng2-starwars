@@ -4,18 +4,26 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FilmListComponent }    from './Film/film-list.component';
-import { PlanetListComponent }  from './Planet/planet-list.component';
+import { FilmListComponent } from './Film/film-list.component';
+import { PeopleListComponent } from './People/people-list.component';
+import { PlanetListComponent } from './Planet/planet-list.component';
+import { SpeciesListComponent } from './Species/species-list.component';
+import { StarshipListComponent } from './Starship/starship-list.component';
+import { VehicleListComponent } from './Vehicle/vehicle-list.component';
 
 const appRoutes: Routes = [
-  { path: '',  component: FilmListComponent },
-  { path: 'film',  component: FilmListComponent },
-  { path: 'planet', component: PlanetListComponent }
+  { path: '', redirectTo: 'film', pathMatch: 'full' },
+  { path: 'film',  component: FilmListComponent},
+  { path: 'planet', component: PlanetListComponent },
+  { path: 'people', component: PeopleListComponent },
+  { path: 'species', component: SpeciesListComponent },
+  { path: 'starship', component: StarshipListComponent },
+  { path: 'vehicle', component: VehicleListComponent }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(appRoutes)
+    RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   exports: [
     RouterModule
