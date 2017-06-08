@@ -1,6 +1,6 @@
 webpackJsonp([1,4],{
 
-/***/ 142:
+/***/ 148:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +9,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 142;
+webpackEmptyContext.id = 148;
 
 
 /***/ }),
 
-/***/ 143:
+/***/ 149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(160);
 
 
 
@@ -35,63 +35,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 148:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__film_list_service__ = __webpack_require__(88);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilmListComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/**
- * Created by irfan.maulana on 1/8/2017.
- */
-
-
-var FilmListComponent = (function () {
-    function FilmListComponent(filmService) {
-        this.filmService = filmService;
-    }
-    FilmListComponent.prototype.ngOnInit = function () {
-        this.loadDataFilms();
-    };
-    FilmListComponent.prototype.loadDataFilms = function () {
-        var _this = this;
-        this.filmService.getFilms()
-            .subscribe(function (films) { return _this.films = films; }, //Bind to view
-        function (//Bind to view
-            err) {
-            // Log errors if any
-            console.log(err);
-        });
-    };
-    FilmListComponent.prototype.trackByEpisodId = function (index, film) {
-        return film.episode_id;
-    };
-    return FilmListComponent;
-}());
-FilmListComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
-        selector: 'film-list',
-        template: "\n      <h2>Films</h2>\n      \n      <table class=\"table\">\n        <thead class=\"table__head\">\n        <tr>\n          <th>#</th>\n          <th>Title</th>\n          <th>Episode</th>\n          <th>Release Date</th>\n        </tr>\n        </thead>\n        <tbody class=\"table__body\">\n        <tr *ngFor=\"let film of films; let i = index; trackBy:trackByEpisodId;\">\n          <td>{{ i+1 }}</td>\n          <td>{{ film.title }}</td>\n          <td>{{ film.episode_id }}</td>\n          <td>{{ film.release_date }}</td>\n        </tr>\n        </tbody>\n      </table>\n  "
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__film_list_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__film_list_service__["a" /* FilmService */]) === "function" && _a || Object])
-], FilmListComponent);
-
-var _a;
-//# sourceMappingURL=film-list.component.js.map
-
-/***/ }),
-
-/***/ 149:
+/***/ 154:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115,7 +59,7 @@ var FoooterComponent = (function () {
 FoooterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
         selector: 'FooterBlock',
-        template: "\n      <div class=\"footer__wrapper\">\n      \n        <div class=\"footer__text\">\n          <span>Crafted with &nbsp;<i class=\"fa fa-heart-o\"></i>&nbsp; by Irfan Maulana</span>\n        </div>\n      \n        <ul class=\"footer__list\">\n          <li class=\"footer__icon footer__icon--facebook\">\n            <a rel=\"nofollow\" href=\"https://www.facebook.com/mazipanneh\">\n              <i class=\"fa fa-facebook-square\"></i>\n            </a>\n          </li>\n          <li class=\"footer__icon footer__icon--twitter\">\n            <a rel=\"nofollow\" href=\"https://twitter.com/Maz_Ipan\">\n              <i class=\"fa fa-twitter\"></i>\n            </a>\n          </li>\n          <li class=\"footer__icon footer__icon--instagram\">\n            <a rel=\"nofollow\" href=\"https://instagram.com/maz_ipan\">\n              <i class=\"fa fa-instagram\"></i>\n            </a>\n          </li>\n          <li class=\"footer__icon footer__icon--linkedin\">\n            <a rel=\"nofollow\" href=\"https://id.linkedin.com/in/irfanmaulanamazipan\">\n              <i class=\"fa fa-linkedin\"></i>\n            </a>\n          </li>\n          <li class=\"footer__icon footer__icon--slideshare\">\n            <a rel=\"nofollow\" href=\"https://www.slideshare.net/IrfanMaulana21\">\n              <i class=\"fa fa-slideshare\"></i>\n            </a>\n          </li>\n          <li class=\"footer__icon footer__icon--github\">\n            <a rel=\"nofollow\" href=\"https://github.com/mazipan\">\n              <i class=\"fa fa-github\"></i>\n            </a>\n          </li>\n          <li class=\"footer__icon footer__icon--wordpress\">\n            <a rel=\"nofollow\" href=\"https://mazipanneh.wordpress.com/\">\n              <i class=\"fa fa-wordpress\"></i>\n            </a>\n          </li>\n        </ul>\n      </div>\n  "
+        template: __webpack_require__(221)
     })
 ], FoooterComponent);
 
@@ -123,7 +67,7 @@ FoooterComponent = __decorate([
 
 /***/ }),
 
-/***/ 150:
+/***/ 155:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -152,7 +96,7 @@ var HeaderComponent = (function () {
 HeaderComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
         selector: 'HeaderBlock',
-        template: "\n        <header role=\"header\" class=\"site__header header\" id=\"header\">\n          <div class=\"header__wrapper\">\n        \n            <div class=\"header__brand\">\n              <img src=\"https://mazipan.github.io/lightweight-admin-template/images/irfan-maulana.jpg\" />\n              <div class=\"header__title\" [innerText]=\"headerTitle\">\n              </div>\n            </div>\n        \n            <div class=\"header__account account account--has-login\">\n              <div class=\"account__wrapper\">\n                <img class=\"account__img\" src=\"https://mazipan.github.io/lightweight-admin-template/images/irfan-maulana.jpg\" />\n                <span class=\"account__name\" [innerText]=\"userName\">\n                </span>\n              </div>\n              <i class=\"account__arrow fa fa-angle-down js--show-dropdown-menu\"></i>\n        \n              <div class=\"account__menu\">\n                <ul class=\"account__menu-wrapper\">\n                  <li class=\"account__menu-item\"><a href=\"#profil\">Profile</a></li>\n                  <li class=\"account__menu-item\"><a href=\"#logout\">Logout</a></li>\n                </ul>\n              </div>\n        \n            </div>\n        \n            <div class=\"header__nav--mobile\">\n              <div class=\"header__nav-btn\" id=\"menu-toggle\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n              </div>\n            </div>\n        \n          </div>\n        </header>\n  "
+        template: __webpack_require__(222)
     }),
     __metadata("design:paramtypes", [])
 ], HeaderComponent);
@@ -161,7 +105,7 @@ HeaderComponent = __decorate([
 
 /***/ }),
 
-/***/ 151:
+/***/ 156:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -195,293 +139,13 @@ var NavigationComponent = (function () {
 NavigationComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
         selector: 'NavigationListBlock',
-        template: "\n      <ul class=\"nav__wrapper\">\n      \n        <li class=\"nav__item\" routerLink=\"/film\" routerLinkActive=\"nav__item--active\">\n          <a href=\"/film\">\n            <i class=\"nav__icon fa fa-film\"></i> Film\n          </a>\n        </li>\n        <li class=\"nav__item\" routerLink=\"/planet\" routerLinkActive=\"nav__item--active\">\n          <a routerLink=\"/planet\" routerLinkActive=\"active\">\n            <i class=\"nav__icon fa fa-globe\"></i> Planet\n          </a>\n        </li>\n        <li class=\"nav__item\" routerLink=\"/vehicle\" routerLinkActive=\"nav__item--active\">\n          <a routerLink=\"/vehicle\" routerLinkActive=\"active\">\n            <i class=\"nav__icon fa fa-car\"></i> Vehicle\n          </a>\n        </li>\n        <li class=\"nav__item\" routerLink=\"/starship\" routerLinkActive=\"nav__item--active\">\n          <a routerLink=\"/starship\" routerLinkActive=\"active\">\n            <i class=\"nav__icon fa fa-space-shuttle\"></i> Starship\n          </a>\n        </li>\n        <li class=\"nav__item\" routerLink=\"/species\" routerLinkActive=\"nav__item--active\">\n          <a routerLink=\"/species\" routerLinkActive=\"active\">\n            <i class=\"nav__icon fa fa-paw\"></i> Species\n          </a>\n        </li>\n        <li class=\"nav__item\" routerLink=\"/people\" routerLinkActive=\"nav__item--active\">\n          <a routerLink=\"/people\" routerLinkActive=\"active\">\n            <i class=\"nav__icon fa fa-users\"></i> People\n          </a>\n        </li>\n      \n      </ul>\n  "
+        template: __webpack_require__(223)
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object])
 ], NavigationComponent);
 
 var _a;
 //# sourceMappingURL=navigation.component.js.map
-
-/***/ }),
-
-/***/ 152:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__people_list_service__ = __webpack_require__(89);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PeopleListComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/**
- * Created by irfan.maulana on 1/8/2017.
- */
-
-
-var PeopleListComponent = (function () {
-    function PeopleListComponent(peopleService) {
-        this.peopleService = peopleService;
-    }
-    PeopleListComponent.prototype.ngOnInit = function () {
-        this.loadDataPeople();
-    };
-    PeopleListComponent.prototype.loadDataPeople = function () {
-        var _this = this;
-        this.peopleService.getPeople()
-            .subscribe(function (people) { return _this.people = people; }, //Bind to view
-        function (//Bind to view
-            err) {
-            // Log errors if any
-            console.log(err);
-        });
-    };
-    PeopleListComponent.prototype.trackByName = function (index, people) {
-        return people.name;
-    };
-    return PeopleListComponent;
-}());
-PeopleListComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
-        selector: 'people-list',
-        template: "\n      <h2>People</h2>\n      \n      <table class=\"table\">\n        <thead class=\"table__head\">\n        <tr>\n          <th>#</th>\n          <th>Name</th>\n          <th>Gender</th>\n          <th>Home World</th>\n        </tr>\n        </thead>\n        <tbody class=\"table__body\">\n        <tr *ngFor=\"let person of people; let i = index; trackBy:trackByName;\">\n          <td>{{ i+1 }}</td>\n          <td>{{ person.name }}</td>\n          <td>{{ person.gender }}</td>\n          <td>{{ person.homeworld }}</td>\n        </tr>\n        </tbody>\n      </table>\n  "
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__people_list_service__["a" /* PeopleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__people_list_service__["a" /* PeopleService */]) === "function" && _a || Object])
-], PeopleListComponent);
-
-var _a;
-//# sourceMappingURL=people-list.component.js.map
-
-/***/ }),
-
-/***/ 153:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__planet_list_service__ = __webpack_require__(90);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlanetListComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/**
- * Created by irfan.maulana on 1/8/2017.
- */
-
-
-var PlanetListComponent = (function () {
-    function PlanetListComponent(planetService) {
-        this.planetService = planetService;
-    }
-    PlanetListComponent.prototype.ngOnInit = function () {
-        this.loadDataPlanets();
-    };
-    PlanetListComponent.prototype.loadDataPlanets = function () {
-        var _this = this;
-        this.planetService.getPlanets()
-            .subscribe(function (planets) { return _this.planets = planets; }, //Bind to view
-        function (//Bind to view
-            err) {
-            // Log errors if any
-            console.log(err);
-        });
-    };
-    PlanetListComponent.prototype.trackByName = function (index, planet) {
-        return planet.name;
-    };
-    return PlanetListComponent;
-}());
-PlanetListComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
-        selector: 'planet-list',
-        template: "\n        <h2>Planets</h2>\n      \n        <table class=\"table\">\n          <thead class=\"table__head\">\n          <tr>\n            <th>#</th>\n            <th>Name</th>\n            <th>Diameter</th>\n            <th>Population</th>\n          </tr>\n          </thead>\n          <tbody class=\"table__body\">\n          <tr *ngFor=\"let planet of planets; let i = index; trackBy:trackByName;\">\n            <td>{{ i+1 }}</td>\n            <td>{{ planet.name }}</td>\n            <td>{{ planet.diameter }}</td>\n            <td>{{ planet.population }}</td>\n          </tr>\n          </tbody>\n        </table>"
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__planet_list_service__["a" /* PlanetService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__planet_list_service__["a" /* PlanetService */]) === "function" && _a || Object])
-], PlanetListComponent);
-
-var _a;
-//# sourceMappingURL=planet-list.component.js.map
-
-/***/ }),
-
-/***/ 154:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__species_list_service__ = __webpack_require__(91);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpeciesListComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/**
- * Created by irfan.maulana on 1/8/2017.
- */
-
-
-var SpeciesListComponent = (function () {
-    function SpeciesListComponent(speciesService) {
-        this.speciesService = speciesService;
-    }
-    SpeciesListComponent.prototype.ngOnInit = function () {
-        this.loadDataSpecies();
-    };
-    SpeciesListComponent.prototype.loadDataSpecies = function () {
-        var _this = this;
-        this.speciesService.getSpecies()
-            .subscribe(function (species) { return _this.species = species; }, //Bind to view
-        function (//Bind to view
-            err) {
-            // Log errors if any
-            console.log(err);
-        });
-    };
-    SpeciesListComponent.prototype.trackByName = function (index, species) {
-        return species.name;
-    };
-    return SpeciesListComponent;
-}());
-SpeciesListComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
-        selector: 'species-list',
-        template: "\n      <h2>Species</h2>\n      \n      <table class=\"table\">\n        <thead class=\"table__head\">\n        <tr>\n          <th>#</th>\n          <th>Name</th>\n          <th>Classification</th>\n          <th>Homeworld</th>\n        </tr>\n        </thead>\n        <tbody class=\"table__body\">\n        <tr *ngFor=\"let spec of species; let i = index; trackBy:trackByName;\">\n          <td>{{ i+1 }}</td>\n          <td>{{ spec.name }}</td>\n          <td>{{ spec.classification }}</td>\n          <td>{{ spec.homeworld }}</td>\n        </tr>\n        </tbody>\n      </table>\n  "
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__species_list_service__["a" /* SpeciesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__species_list_service__["a" /* SpeciesService */]) === "function" && _a || Object])
-], SpeciesListComponent);
-
-var _a;
-//# sourceMappingURL=species-list.component.js.map
-
-/***/ }),
-
-/***/ 155:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__starship_list_service__ = __webpack_require__(92);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StarshipListComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/**
- * Created by irfan.maulana on 1/8/2017.
- */
-
-
-var StarshipListComponent = (function () {
-    function StarshipListComponent(starshipService) {
-        this.starshipService = starshipService;
-    }
-    StarshipListComponent.prototype.ngOnInit = function () {
-        this.loadDataStarship();
-    };
-    StarshipListComponent.prototype.loadDataStarship = function () {
-        var _this = this;
-        this.starshipService.getStarship()
-            .subscribe(function (starship) { return _this.starship = starship; }, //Bind to view
-        function (//Bind to view
-            err) {
-            // Log errors if any
-            console.log(err);
-        });
-    };
-    StarshipListComponent.prototype.trackByName = function (index, starship) {
-        return starship.name;
-    };
-    return StarshipListComponent;
-}());
-StarshipListComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
-        selector: 'starship-list',
-        template: "\n      <h2>Films</h2>\n      \n      <table class=\"table\">\n        <thead class=\"table__head\">\n        <tr>\n          <th>#</th>\n          <th>Name</th>\n          <th>Passengers</th>\n          <th>Starship Class</th>\n        </tr>\n        </thead>\n        <tbody class=\"table__body\">\n        <tr *ngFor=\"let star of starship; let i = index; trackBy:trackByName;\">\n          <td>{{ i+1 }}</td>\n          <td>{{ star.name }}</td>\n          <td>{{ star.passengers }}</td>\n          <td>{{ star.starship_class }}</td>\n        </tr>\n        </tbody>\n      </table>\n  "
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__starship_list_service__["a" /* StarshipService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__starship_list_service__["a" /* StarshipService */]) === "function" && _a || Object])
-], StarshipListComponent);
-
-var _a;
-//# sourceMappingURL=starship-list.component.js.map
-
-/***/ }),
-
-/***/ 156:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vehicle_list_service__ = __webpack_require__(93);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleListComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/**
- * Created by irfan.maulana on 1/8/2017.
- */
-
-
-var VehicleListComponent = (function () {
-    function VehicleListComponent(vehicleService) {
-        this.vehicleService = vehicleService;
-    }
-    VehicleListComponent.prototype.ngOnInit = function () {
-        this.loadDataVehicle();
-    };
-    VehicleListComponent.prototype.loadDataVehicle = function () {
-        var _this = this;
-        this.vehicleService.getVehicle()
-            .subscribe(function (vehicle) { return _this.vehicle = vehicle; }, //Bind to view
-        function (//Bind to view
-            err) {
-            // Log errors if any
-            console.log(err);
-        });
-    };
-    VehicleListComponent.prototype.trackByName = function (index, vehicle) {
-        return vehicle.name;
-    };
-    return VehicleListComponent;
-}());
-VehicleListComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
-        selector: 'vehicle-list',
-        template: "\n      <h2>Vehicle</h2>\n      \n      <table class=\"table\">\n        <thead class=\"table__head\">\n        <tr>\n          <th>#</th>\n          <th>Name</th>\n          <th>Vehicle Class</th>\n          <th>Manufacturer</th>\n        </tr>\n        </thead>\n        <tbody class=\"table__body\">\n        <tr *ngFor=\"let veh of vehicle; let i = index; trackBy:trackByName;\">\n          <td>{{ i+1 }}</td>\n          <td>{{ veh.name }}</td>\n          <td>{{ veh.vehicle_class }}</td>\n          <td>{{ veh.manufacturer }}</td>\n        </tr>\n        </tbody>\n      </table>\n  "
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__vehicle_list_service__["a" /* VehicleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__vehicle_list_service__["a" /* VehicleService */]) === "function" && _a || Object])
-], VehicleListComponent);
-
-var _a;
-//# sourceMappingURL=vehicle-list.component.js.map
 
 /***/ }),
 
@@ -521,23 +185,23 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routing_module__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Header_header_component__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Navigation_navigation_component__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Footer_footer_component__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Film_film_list_component__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__People_people_list_component__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Planet_planet_list_component__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Species_species_list_component__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Starship_starship_list_component__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Vehicle_vehicle_list_component__ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Film_film_list_service__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Planet_planet_list_service__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__People_people_list_service__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Species_species_list_service__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Starship_starship_list_service__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Vehicle_vehicle_list_service__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Header_header_component__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Navigation_navigation_component__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Footer_footer_component__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Film_film_list_component__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__People_people_list_component__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Planet_planet_list_component__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Species_species_list_component__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Starship_starship_list_component__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Vehicle_vehicle_list_component__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Film_film_list_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Planet_planet_list_service__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__People_people_list_service__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__Species_species_list_service__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Starship_starship_list_service__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Vehicle_vehicle_list_service__ = __webpack_require__(99);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -548,6 +212,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+/*
+ Routing Application
+ */
 
 /*
 Component partial
@@ -571,15 +238,6 @@ Component partial
 
 
 
-var appRoutes = [
-    { path: '', redirectTo: 'film', pathMatch: 'full' },
-    { path: 'film', component: __WEBPACK_IMPORTED_MODULE_8__Film_film_list_component__["a" /* FilmListComponent */] },
-    { path: 'planet', component: __WEBPACK_IMPORTED_MODULE_10__Planet_planet_list_component__["a" /* PlanetListComponent */] },
-    { path: 'people', component: __WEBPACK_IMPORTED_MODULE_9__People_people_list_component__["a" /* PeopleListComponent */] },
-    { path: 'species', component: __WEBPACK_IMPORTED_MODULE_11__Species_species_list_component__["a" /* SpeciesListComponent */] },
-    { path: 'starship', component: __WEBPACK_IMPORTED_MODULE_12__Starship_starship_list_component__["a" /* StarshipListComponent */] },
-    { path: 'vehicle', component: __WEBPACK_IMPORTED_MODULE_13__Vehicle_vehicle_list_component__["a" /* VehicleListComponent */] }
-];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -591,12 +249,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* JsonpModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { useHash: true })
+            __WEBPACK_IMPORTED_MODULE_3__app_routing_module__["a" /* AppRoutingModule */]
         ],
-        /*
-         AppRoutingModule
-         RouterModule.forRoot(appRoutes)
-        */
         declarations: [
             __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_5__Header_header_component__["a" /* HeaderComponent */],
@@ -629,6 +283,65 @@ AppModule = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Film_film_list_component__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__People_people_list_component__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Planet_planet_list_component__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Species_species_list_component__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Starship_starship_list_component__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Vehicle_vehicle_list_component__ = __webpack_require__(98);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+/**
+ * Created by irfan.maulana on 1/9/2017.
+ */
+
+
+
+
+
+
+
+
+var appRoutes = [
+    { path: '', redirectTo: 'film', pathMatch: 'full' },
+    { path: 'film', component: __WEBPACK_IMPORTED_MODULE_2__Film_film_list_component__["a" /* FilmListComponent */] },
+    { path: 'planet', component: __WEBPACK_IMPORTED_MODULE_4__Planet_planet_list_component__["a" /* PlanetListComponent */] },
+    { path: 'people', component: __WEBPACK_IMPORTED_MODULE_3__People_people_list_component__["a" /* PeopleListComponent */] },
+    { path: 'species', component: __WEBPACK_IMPORTED_MODULE_5__Species_species_list_component__["a" /* SpeciesListComponent */] },
+    { path: 'starship', component: __WEBPACK_IMPORTED_MODULE_6__Starship_starship_list_component__["a" /* StarshipListComponent */] },
+    { path: 'vehicle', component: __WEBPACK_IMPORTED_MODULE_7__Vehicle_vehicle_list_component__["a" /* VehicleListComponent */] }
+];
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
+    }
+    return AppRoutingModule;
+}());
+AppRoutingModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { useHash: true })
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]
+        ]
+    })
+], AppRoutingModule);
+
+//# sourceMappingURL=app.routing.module.js.map
+
+/***/ }),
+
+/***/ 160:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
@@ -639,6 +352,69 @@ var environment = {
     production: false
 };
 //# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ 220:
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Films</h2>\r\n<table class=\"table\">\r\n  <thead class=\"table__head\">\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Title</th>\r\n      <th>Episode</th>\r\n      <th>Release Date</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody class=\"table__body\">\r\n    <tr *ngFor=\"let film of films; let i = index; trackBy:trackByEpisodId;\">\r\n      <td>{{ i+1 }}</td>\r\n      <td>{{ film.title }}</td>\r\n      <td>{{ film.episode_id }}</td>\r\n      <td>{{ film.release_date }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+
+/***/ }),
+
+/***/ 221:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"footer__wrapper\">\r\n  <div class=\"footer__text\">\r\n    <span>Crafted with &nbsp;<i class=\"fa fa-heart-o\"></i>&nbsp; by Irfan Maulana</span>\r\n  </div>\r\n  <ul class=\"footer__list\">\r\n    <li class=\"footer__icon footer__icon--facebook\">\r\n      <a rel=\"nofollow\" href=\"https://www.facebook.com/mazipanneh\">\r\n        <i class=\"fa fa-facebook-square\"></i>\r\n      </a>\r\n    </li>\r\n    <li class=\"footer__icon footer__icon--twitter\">\r\n      <a rel=\"nofollow\" href=\"https://twitter.com/Maz_Ipan\">\r\n        <i class=\"fa fa-twitter\"></i>\r\n      </a>\r\n    </li>\r\n    <li class=\"footer__icon footer__icon--instagram\">\r\n      <a rel=\"nofollow\" href=\"https://instagram.com/maz_ipan\">\r\n        <i class=\"fa fa-instagram\"></i>\r\n      </a>\r\n    </li>\r\n    <li class=\"footer__icon footer__icon--linkedin\">\r\n      <a rel=\"nofollow\" href=\"https://id.linkedin.com/in/irfanmaulanamazipan\">\r\n        <i class=\"fa fa-linkedin\"></i>\r\n      </a>\r\n    </li>\r\n    <li class=\"footer__icon footer__icon--slideshare\">\r\n      <a rel=\"nofollow\" href=\"https://www.slideshare.net/IrfanMaulana21\">\r\n        <i class=\"fa fa-slideshare\"></i>\r\n      </a>\r\n    </li>\r\n    <li class=\"footer__icon footer__icon--github\">\r\n      <a rel=\"nofollow\" href=\"https://github.com/mazipan\">\r\n        <i class=\"fa fa-github\"></i>\r\n      </a>\r\n    </li>\r\n    <li class=\"footer__icon footer__icon--wordpress\">\r\n      <a rel=\"nofollow\" href=\"https://mazipanneh.wordpress.com/\">\r\n        <i class=\"fa fa-wordpress\"></i>\r\n      </a>\r\n    </li>\r\n  </ul>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ 222:
+/***/ (function(module, exports) {
+
+module.exports = "<header role=\"header\" class=\"site__header header\" id=\"header\">\r\n  <div class=\"header__wrapper\">\r\n    <div class=\"header__brand\">\r\n      <img src=\"https://mazipan.github.io/lightweight-admin-template/images/irfan-maulana.jpg\" />\r\n      <div class=\"header__title\" [innerText]=\"headerTitle\">\r\n      </div>\r\n    </div>\r\n    <div class=\"header__account account account--has-login\">\r\n      <div class=\"account__wrapper\">\r\n        <img class=\"account__img\" src=\"https://mazipan.github.io/lightweight-admin-template/images/irfan-maulana.jpg\" />\r\n        <span class=\"account__name\" [innerText]=\"userName\">\r\n                </span>\r\n      </div>\r\n      <i class=\"account__arrow fa fa-angle-down js--show-dropdown-menu\"></i>\r\n      <div class=\"account__menu\">\r\n        <ul class=\"account__menu-wrapper\">\r\n          <li class=\"account__menu-item\"><a href=\"#profil\">Profile</a></li>\r\n          <li class=\"account__menu-item\"><a href=\"#logout\">Logout</a></li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n    <div class=\"header__nav--mobile\">\r\n      <div class=\"header__nav-btn\" id=\"menu-toggle\">\r\n        <span></span>\r\n        <span></span>\r\n        <span></span>\r\n        <span></span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n"
+
+/***/ }),
+
+/***/ 223:
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"nav__wrapper\">\r\n  <li class=\"nav__item\" routerLink=\"/film\" routerLinkActive=\"nav__item--active\">\r\n    <a routerLink=\"/film\">\r\n      <i class=\"nav__icon fa fa-film\"></i> Film\r\n    </a>\r\n  </li>\r\n  <li class=\"nav__item\" routerLink=\"/planet\" routerLinkActive=\"nav__item--active\">\r\n    <a routerLink=\"/planet\">\r\n      <i class=\"nav__icon fa fa-globe\"></i> Planet\r\n    </a>\r\n  </li>\r\n  <li class=\"nav__item\" routerLink=\"/vehicle\" routerLinkActive=\"nav__item--active\">\r\n    <a routerLink=\"/vehicle\">\r\n      <i class=\"nav__icon fa fa-car\"></i> Vehicle\r\n    </a>\r\n  </li>\r\n  <li class=\"nav__item\" routerLink=\"/starship\" routerLinkActive=\"nav__item--active\">\r\n    <a routerLink=\"/starship\">\r\n      <i class=\"nav__icon fa fa-space-shuttle\"></i> Starship\r\n    </a>\r\n  </li>\r\n  <li class=\"nav__item\" routerLink=\"/species\" routerLinkActive=\"nav__item--active\">\r\n    <a routerLink=\"/species\">\r\n      <i class=\"nav__icon fa fa-paw\"></i> Species\r\n    </a>\r\n  </li>\r\n  <li class=\"nav__item\" routerLink=\"/people\" routerLinkActive=\"nav__item--active\">\r\n    <a routerLink=\"/people\">\r\n      <i class=\"nav__icon fa fa-users\"></i> People\r\n    </a>\r\n  </li>\r\n</ul>\r\n"
+
+/***/ }),
+
+/***/ 224:
+/***/ (function(module, exports) {
+
+module.exports = "<h2>People</h2>\r\n<table class=\"table\">\r\n  <thead class=\"table__head\">\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Name</th>\r\n      <th>Gender</th>\r\n      <th>Home World</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody class=\"table__body\">\r\n    <tr *ngFor=\"let person of people; let i = index; trackBy:trackByName;\">\r\n      <td>{{ i+1 }}</td>\r\n      <td>{{ person.name }}</td>\r\n      <td>{{ person.gender }}</td>\r\n      <td>{{ person.homeworld }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+
+/***/ }),
+
+/***/ 225:
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Planets</h2>\r\n<table class=\"table\">\r\n  <thead class=\"table__head\">\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Name</th>\r\n      <th>Diameter</th>\r\n      <th>Population</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody class=\"table__body\">\r\n    <tr *ngFor=\"let planet of planets; let i = index; trackBy:trackByName;\">\r\n      <td>{{ i+1 }}</td>\r\n      <td>{{ planet.name }}</td>\r\n      <td>{{ planet.diameter }}</td>\r\n      <td>{{ planet.population }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+
+/***/ }),
+
+/***/ 226:
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Species</h2>\r\n<table class=\"table\">\r\n  <thead class=\"table__head\">\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Name</th>\r\n      <th>Classification</th>\r\n      <th>Homeworld</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody class=\"table__body\">\r\n    <tr *ngFor=\"let spec of species; let i = index; trackBy:trackByName;\">\r\n      <td>{{ i+1 }}</td>\r\n      <td>{{ spec.name }}</td>\r\n      <td>{{ spec.classification }}</td>\r\n      <td>{{ spec.homeworld }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+
+/***/ }),
+
+/***/ 227:
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Films</h2>\r\n<table class=\"table\">\r\n  <thead class=\"table__head\">\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Name</th>\r\n      <th>Passengers</th>\r\n      <th>Starship Class</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody class=\"table__body\">\r\n    <tr *ngFor=\"let star of starship; let i = index; trackBy:trackByName;\">\r\n      <td>{{ i+1 }}</td>\r\n      <td>{{ star.name }}</td>\r\n      <td>{{ star.passengers }}</td>\r\n      <td>{{ star.starship_class }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+
+/***/ }),
+
+/***/ 228:
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Vehicle</h2>\r\n<table class=\"table\">\r\n  <thead class=\"table__head\">\r\n    <tr>\r\n      <th>#</th>\r\n      <th>Name</th>\r\n      <th>Vehicle Class</th>\r\n      <th>Manufacturer</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody class=\"table__body\">\r\n    <tr *ngFor=\"let veh of vehicle; let i = index; trackBy:trackByName;\">\r\n      <td>{{ i+1 }}</td>\r\n      <td>{{ veh.name }}</td>\r\n      <td>{{ veh.vehicle_class }}</td>\r\n      <td>{{ veh.manufacturer }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
 
 /***/ }),
 
@@ -783,15 +559,71 @@ UrlCollection.VEHICLE = "https://swapi.co/api/vehicles/";
 
 /***/ }),
 
-/***/ 482:
+/***/ 492:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(143);
+module.exports = __webpack_require__(149);
 
 
 /***/ }),
 
 /***/ 88:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__film_list_service__ = __webpack_require__(89);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilmListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by irfan.maulana on 1/8/2017.
+ */
+
+
+var FilmListComponent = (function () {
+    function FilmListComponent(filmService) {
+        this.filmService = filmService;
+    }
+    FilmListComponent.prototype.ngOnInit = function () {
+        this.loadDataFilms();
+    };
+    FilmListComponent.prototype.loadDataFilms = function () {
+        var self = this;
+        self.filmService.getFilms()
+            .subscribe(function (films) { return self.films = films; }, //Bind to view
+        function (//Bind to view
+            err) {
+            // Log errors if any
+            console.log(err);
+        });
+    };
+    FilmListComponent.prototype.trackByEpisodId = function (index, film) {
+        return film.episode_id;
+    };
+    return FilmListComponent;
+}());
+FilmListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
+        selector: 'film-list',
+        template: __webpack_require__(220)
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__film_list_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__film_list_service__["a" /* FilmService */]) === "function" && _a || Object])
+], FilmListComponent);
+
+var _a;
+//# sourceMappingURL=film-list.component.js.map
+
+/***/ }),
+
+/***/ 89:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -873,7 +705,63 @@ var _a;
 
 /***/ }),
 
-/***/ 89:
+/***/ 90:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__people_list_service__ = __webpack_require__(91);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PeopleListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by irfan.maulana on 1/8/2017.
+ */
+
+
+var PeopleListComponent = (function () {
+    function PeopleListComponent(peopleService) {
+        this.peopleService = peopleService;
+    }
+    PeopleListComponent.prototype.ngOnInit = function () {
+        this.loadDataPeople();
+    };
+    PeopleListComponent.prototype.loadDataPeople = function () {
+        var _this = this;
+        this.peopleService.getPeople()
+            .subscribe(function (people) { return _this.people = people; }, //Bind to view
+        function (//Bind to view
+            err) {
+            // Log errors if any
+            console.log(err);
+        });
+    };
+    PeopleListComponent.prototype.trackByName = function (index, people) {
+        return people.name;
+    };
+    return PeopleListComponent;
+}());
+PeopleListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
+        selector: 'people-list',
+        template: __webpack_require__(224)
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__people_list_service__["a" /* PeopleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__people_list_service__["a" /* PeopleService */]) === "function" && _a || Object])
+], PeopleListComponent);
+
+var _a;
+//# sourceMappingURL=people-list.component.js.map
+
+/***/ }),
+
+/***/ 91:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -955,7 +843,63 @@ var _a;
 
 /***/ }),
 
-/***/ 90:
+/***/ 92:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__planet_list_service__ = __webpack_require__(93);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlanetListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by irfan.maulana on 1/8/2017.
+ */
+
+
+var PlanetListComponent = (function () {
+    function PlanetListComponent(planetService) {
+        this.planetService = planetService;
+    }
+    PlanetListComponent.prototype.ngOnInit = function () {
+        this.loadDataPlanets();
+    };
+    PlanetListComponent.prototype.loadDataPlanets = function () {
+        var _this = this;
+        this.planetService.getPlanets()
+            .subscribe(function (planets) { return _this.planets = planets; }, //Bind to view
+        function (//Bind to view
+            err) {
+            // Log errors if any
+            console.log(err);
+        });
+    };
+    PlanetListComponent.prototype.trackByName = function (index, planet) {
+        return planet.name;
+    };
+    return PlanetListComponent;
+}());
+PlanetListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
+        selector: 'planet-list',
+        template: __webpack_require__(225)
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__planet_list_service__["a" /* PlanetService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__planet_list_service__["a" /* PlanetService */]) === "function" && _a || Object])
+], PlanetListComponent);
+
+var _a;
+//# sourceMappingURL=planet-list.component.js.map
+
+/***/ }),
+
+/***/ 93:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1037,7 +981,63 @@ var _a;
 
 /***/ }),
 
-/***/ 91:
+/***/ 94:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__species_list_service__ = __webpack_require__(95);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpeciesListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by irfan.maulana on 1/8/2017.
+ */
+
+
+var SpeciesListComponent = (function () {
+    function SpeciesListComponent(speciesService) {
+        this.speciesService = speciesService;
+    }
+    SpeciesListComponent.prototype.ngOnInit = function () {
+        this.loadDataSpecies();
+    };
+    SpeciesListComponent.prototype.loadDataSpecies = function () {
+        var _this = this;
+        this.speciesService.getSpecies()
+            .subscribe(function (species) { return _this.species = species; }, //Bind to view
+        function (//Bind to view
+            err) {
+            // Log errors if any
+            console.log(err);
+        });
+    };
+    SpeciesListComponent.prototype.trackByName = function (index, species) {
+        return species.name;
+    };
+    return SpeciesListComponent;
+}());
+SpeciesListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
+        selector: 'species-list',
+        template: __webpack_require__(226)
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__species_list_service__["a" /* SpeciesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__species_list_service__["a" /* SpeciesService */]) === "function" && _a || Object])
+], SpeciesListComponent);
+
+var _a;
+//# sourceMappingURL=species-list.component.js.map
+
+/***/ }),
+
+/***/ 95:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1119,7 +1119,63 @@ var _a;
 
 /***/ }),
 
-/***/ 92:
+/***/ 96:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__starship_list_service__ = __webpack_require__(97);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StarshipListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by irfan.maulana on 1/8/2017.
+ */
+
+
+var StarshipListComponent = (function () {
+    function StarshipListComponent(starshipService) {
+        this.starshipService = starshipService;
+    }
+    StarshipListComponent.prototype.ngOnInit = function () {
+        this.loadDataStarship();
+    };
+    StarshipListComponent.prototype.loadDataStarship = function () {
+        var _this = this;
+        this.starshipService.getStarship()
+            .subscribe(function (starship) { return _this.starship = starship; }, //Bind to view
+        function (//Bind to view
+            err) {
+            // Log errors if any
+            console.log(err);
+        });
+    };
+    StarshipListComponent.prototype.trackByName = function (index, starship) {
+        return starship.name;
+    };
+    return StarshipListComponent;
+}());
+StarshipListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
+        selector: 'starship-list',
+        template: __webpack_require__(227)
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__starship_list_service__["a" /* StarshipService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__starship_list_service__["a" /* StarshipService */]) === "function" && _a || Object])
+], StarshipListComponent);
+
+var _a;
+//# sourceMappingURL=starship-list.component.js.map
+
+/***/ }),
+
+/***/ 97:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1201,7 +1257,63 @@ var _a;
 
 /***/ }),
 
-/***/ 93:
+/***/ 98:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vehicle_list_service__ = __webpack_require__(99);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by irfan.maulana on 1/8/2017.
+ */
+
+
+var VehicleListComponent = (function () {
+    function VehicleListComponent(vehicleService) {
+        this.vehicleService = vehicleService;
+    }
+    VehicleListComponent.prototype.ngOnInit = function () {
+        this.loadDataVehicle();
+    };
+    VehicleListComponent.prototype.loadDataVehicle = function () {
+        var _this = this;
+        this.vehicleService.getVehicle()
+            .subscribe(function (vehicle) { return _this.vehicle = vehicle; }, //Bind to view
+        function (//Bind to view
+            err) {
+            // Log errors if any
+            console.log(err);
+        });
+    };
+    VehicleListComponent.prototype.trackByName = function (index, vehicle) {
+        return vehicle.name;
+    };
+    return VehicleListComponent;
+}());
+VehicleListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Component */])({
+        selector: 'vehicle-list',
+        template: __webpack_require__(228)
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__vehicle_list_service__["a" /* VehicleService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__vehicle_list_service__["a" /* VehicleService */]) === "function" && _a || Object])
+], VehicleListComponent);
+
+var _a;
+//# sourceMappingURL=vehicle-list.component.js.map
+
+/***/ }),
+
+/***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1283,5 +1395,5 @@ var _a;
 
 /***/ })
 
-},[482]);
+},[492]);
 //# sourceMappingURL=main.bundle.js.map
