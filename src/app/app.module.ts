@@ -1,13 +1,10 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
-
 /*
  Routing Application
  */
 import { AppRoutingModule }  from './app.routing.module';
-
 /*
 Component partial
 */
@@ -21,7 +18,6 @@ import { PlanetListComponent } from './Planet/planet-list.component';
 import { SpeciesListComponent } from './Species/species-list.component';
 import { StarshipListComponent } from './Starship/starship-list.component';
 import { VehicleListComponent } from './Vehicle/vehicle-list.component';
-
 /*
  Service to get data
  */
