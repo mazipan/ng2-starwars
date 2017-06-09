@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilmTitlePipe implements PipeTransform {
 
-  transform(value: string, dateString: string): string {
+  transform(value: string): string {
   	let res = 'Film '+ value
 
     return res;
