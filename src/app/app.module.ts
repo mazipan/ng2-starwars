@@ -27,6 +27,10 @@ import { PeopleService } from "./People/people-list.service";
 import { SpeciesService } from "./Species/species-list.service";
 import { StarshipService } from "./Starship/starship-list.service";
 import { VehicleService } from "./Vehicle/vehicle-list.service";
+/*
+ Custom Pipe
+ */
+import { FilmTitlePipe } from './Pipe/film-title/film-title.pipe';
 
 
 @NgModule({
@@ -48,7 +52,9 @@ import { VehicleService } from "./Vehicle/vehicle-list.service";
     PlanetListComponent,
     SpeciesListComponent,
     StarshipListComponent,
-    VehicleListComponent
+    VehicleListComponent,
+    // Custom Pipe
+    FilmTitlePipe
   ],
 
   providers: [
