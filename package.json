@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href /ng2-starwars/ -d /ng2-starwars/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
